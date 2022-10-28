@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    padding: 2rem 6rem;
+    background: #4c6e97;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+p,
+button,
+label,
+input,
+li {
+    font-size: 2rem;
+}
+
+h1 {
+    font-size: 2.6rem;
+
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+h3,
+h5 {
+    font-size: 2.8rem;
+}
+
+/* Nav Section with Hero */
+.main-head {
+    background: #131c27;
+    color: white;
+}
+
+/* Dont use height instead use min-height along with padding or use them seperately to avoid overflow*/
+nav {
+    min-height: 10vh;
+    padding: 2rem;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+nav ul {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+/* both ul and logo h2 takes half space after using flex */
+#logo {
+    flex: 1 1 40rem;
+    font-family: 'pattaya', sans-serif;
+    font-weight: 400;
+}
+
+.hero {
+    min-height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("img/landing-page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hero h3 {
+    padding: 5rem;
+}
+
+@media screen and (max-width:932px) {
+    html {
+        font-size: 45%;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    #logo {
+        padding: 2rem;
+    }
+
+    /* list squashes in low width so added margin */
+    ul li {
+        margin: 5px;
+    }
+
+
+}
