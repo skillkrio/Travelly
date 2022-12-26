@@ -279,6 +279,33 @@ p {
     padding: 1rem 3rem;
 }
 
+footer {
+    background: #233244;
+    color: white;
+}
+
+.footer-wrapper {
+    display: flex;
+    min-height: 10vh;
+    align-items: center;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+footer h5 {
+    flex: 1 1 40rem;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 
 
@@ -302,6 +329,14 @@ p {
 
     .cloud {
         height: 40rem;
+    }
+
+    .form-wrapper {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
     }
 
 
