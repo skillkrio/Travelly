@@ -233,8 +233,51 @@ p {
     padding: 1rem;
 }
 
+/* Contact section */
 
+.contact {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("img/contact-mountain.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 
+}
+
+.form-wrapper {
+    background: rgba(0, 0, 0, 0.5);
+    width: 60%;
+    color: white;
+    border-radius: 3rem;
+}
+
+.form-wrapper header {
+    text-align: center;
+    padding: 3rem;
+}
+
+.name-form,
+.email-form {
+    text-align: center;
+    padding: 4rem;
+}
+
+.form-wrapper label {
+    margin: 0rem 3rem;
+}
+
+.form-wrapper button {
+    margin-top: 7rem;
+    width: 100%;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+.form-wrapper input {
+    padding: 1rem 3rem;
+}
 
 
 
