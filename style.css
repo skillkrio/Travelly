@@ -1,3 +1,10 @@
+/* To scale an image by keeping its aspect ratio
+try this
+img {
+  max-width:100%;
+  height:auto;
+} */
+
 * {
     padding: 0;
     margin: 0;
@@ -10,6 +17,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
+
 }
 
 a {
@@ -24,6 +32,11 @@ button {
     color: white;
     cursor: pointer;
     border: none;
+    transition: background 0.5s ease-in-out;
+}
+
+button:hover {
+    background: #233244;
 }
 
 p,
@@ -89,7 +102,6 @@ nav ul {
 .hero {
     min-height: 90vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("img/landing-page.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     color: white;
@@ -103,6 +115,77 @@ nav ul {
 .hero h3 {
     padding: 5rem;
 }
+
+#location {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url("img/new-york-page.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* if cloud overflow the location section it will be hidden */
+    overflow: hidden;
+}
+
+.location-head {
+    width: 90%;
+    margin: auto;
+}
+
+.location-head h2 {
+    font-size: 3rem;
+    padding: 2rem 0rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+    /* text-decoration-thickness has less browser support check current status */
+}
+
+.location-head h3 {
+    font-size: 2.5rem;
+    padding: 1.5rem 0rem;
+    font-weight: 600;
+
+    /* textgradient is achieved using the below 3 styles */
+    background: linear-gradient(#131c27, #663b34);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cloud {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+
+    /* scale image by maintaining aspect ratio max-width and height comes to rescue*/
+    max-width: 50%;
+    height: auto;
+}
+
+.moving-cloud-1 {
+    animation: cloudAnimate 3s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+    top: 10%;
+    z-index: -1;
+    opacity: 0.5;
+    animation: cloudAnimate 3.5s infinite alternate ease-in-out;
+}
+
+/* translateX - -10(left),10(right)
+translateY - -10(top),10(bottom) */
+@keyframes cloudAnimate {
+    from {
+        transform: translate(10%, -10%);
+    }
+
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
 
 @media screen and (max-width:932px) {
     html {
@@ -122,5 +205,13 @@ nav ul {
         margin: 5px;
     }
 
+    .cloud {
+        height: 40rem;
+    }
+
+    #location {
+        background-size: cover;
+        background-position: center;
+    }
 
 }
