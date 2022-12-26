@@ -186,6 +186,58 @@ translateY - -10(top),10(bottom) */
     }
 }
 
+/* Benefits Section */
+.benefits-head {
+    min-height: 30vh;
+    background: #343c44;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    /* If i dont add this it will stretch the card height and minheight of 40vh on card doesn't work */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    font-size: 2rem;
+    flex: 1 1 20rem;
+    min-height: 40rem;
+    margin: 2rem 4rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1), 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cards img {
+    width: 25%;
+    margin: 2rem;
+}
+
+.card-icon {
+    background: #233244;
+}
+
+.card h4,
+p {
+    padding: 1rem;
+}
+
+
+
+
+
+
 
 @media screen and (max-width:932px) {
     html {
@@ -209,9 +261,6 @@ translateY - -10(top),10(bottom) */
         height: 40rem;
     }
 
-    #location {
-        background-size: cover;
-        background-position: center;
-    }
+
 
 }
