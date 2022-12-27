@@ -73,14 +73,15 @@
         <header class="form-header">
             <h2>Contact Us</h2>
         </header>
-        <form action="">
+        <form action="https://formspree.io/f/myyagore"
+        method="POST">
             <div class="name-form">
             <label for="name">Name:</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" name="name" required>
             </div>
             <div class="email-form">
                 <label for="email">Email:</label>
-                <input type="email" id="email" required>
+                <input type="email" id="email" name="email" required>
             </div>
             <button type="submit">Submit</button>
         </form>
