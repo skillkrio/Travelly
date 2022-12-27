@@ -235,7 +235,7 @@ p {
 
 /* Contact section */
 
-.contact {
+#contact {
     min-height: 100vh;
     display: flex;
     justify-content: center;
